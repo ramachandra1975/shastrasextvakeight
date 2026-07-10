@@ -1543,13 +1543,17 @@ body.paginated main{padding-bottom:120px;}
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
 <title>Vācika Abhinaya — Module III</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
+    color-scheme: light only;
     --paper:#f0ede4;
+    --paper-solid:#f0ede4;
     --ink:#20242b;
     --ink-soft:#454d58;
     --teal:#2f5d5a;
@@ -1558,18 +1562,22 @@ body.paginated main{padding-bottom:120px;}
     --max-w: 780px;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{
+    scroll-behavior:smooth;
+    background-color:#f0ede4;
+    color-scheme: light only;
+  }
   body{
     margin:0;
-    background:
-      radial-gradient(1100px 700px at 90% -10%, rgba(47,93,90,0.06), transparent 60%),
-      var(--paper);
-    color:var(--ink);
+    background-color:#f0ede4;
+    background-image: radial-gradient(1100px 700px at 90% -10%, rgba(47,93,90,0.06), transparent 60%);
+    color:#20242b;
     font-family:'Lora', Georgia, serif;
     font-size:18px;
     line-height:1.75;
+    -webkit-text-fill-color:#20242b;
   }
-  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px 140px;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px 140px; background-color:transparent;}
 
   .cover{
     padding:88px 0 56px;
@@ -1582,7 +1590,7 @@ body.paginated main{padding-bottom:120px;}
     letter-spacing:.22em;
     text-transform:uppercase;
     font-size:12px;
-    color:var(--teal);
+    color:#2f5d5a;
     margin-bottom:20px;
   }
   .cover h1{
@@ -1591,13 +1599,14 @@ body.paginated main{padding-bottom:120px;}
     font-size:clamp(38px, 6.5vw, 60px);
     line-height:1.08;
     margin:0 0 16px;
+    color:#20242b;
   }
   .cover .sub{
     font-family:'Lora', serif;
     font-style:italic;
     font-weight:400;
     font-size:19px;
-    color:var(--ink-soft);
+    color:#454d58;
     max-width:560px;
     margin:0 auto;
   }
@@ -1605,8 +1614,9 @@ body.paginated main{padding-bottom:120px;}
     display:inline-block;
     margin-top:26px;
     padding:6px 14px;
-    border:1px solid var(--teal);
-    color:var(--teal);
+    border:1px solid #2f5d5a;
+    color:#2f5d5a;
+    background-color:#f0ede4;
     font-family:'JetBrains Mono', monospace;
     font-size:12px;
     letter-spacing:.08em;
@@ -1617,7 +1627,7 @@ body.paginated main{padding-bottom:120px;}
     margin-top:28px;
     font-family:'JetBrains Mono', monospace;
     font-size:11.5px;
-    color:var(--ink-soft);
+    color:#454d58;
   }
   .strand-key span{ display:flex; align-items:center; gap:6px; }
   .dot{ width:8px; height:8px; border-radius:50%; display:inline-block; }
@@ -1629,7 +1639,7 @@ body.paginated main{padding-bottom:120px;}
     font-size:12.5px;
     letter-spacing:.2em;
     text-transform:uppercase;
-    color:var(--gold);
+    color:#8a6d2f;
     margin:0 0 18px;
   }
   .toc ul{ list-style:none; margin:0; padding:0; }
@@ -1637,42 +1647,46 @@ body.paginated main{padding-bottom:120px;}
     display:flex; gap:14px; align-items:baseline;
     padding:9px 0;
     text-decoration:none;
-    color:var(--ink-soft);
+    color:#454d58;
+    background-color:transparent;
     border-bottom:1px solid var(--rule);
     font-size:15.5px;
     transition:color .15s ease, padding-left .15s ease;
   }
-  .toc a:hover{ color:var(--teal); padding-left:6px; }
+  .toc a:hover{ color:#2f5d5a; padding-left:6px; }
   .toc-num{
     font-family:'JetBrains Mono', monospace;
     font-size:12.5px;
-    color:var(--gold);
+    color:#8a6d2f;
     min-width:22px;
   }
-  .toc-title{ font-family:'Cormorant Garamond', serif; font-size:17px; }
+  .toc-title{ font-family:'Cormorant Garamond', serif; font-size:17px; color:#20242b; }
 
   .module{ padding-top:12px; margin-bottom:56px; }
   .module-head{
     display:flex; align-items:baseline; gap:16px;
     margin-bottom:20px; padding-bottom:13px;
-    border-bottom:2px solid var(--teal);
+    border-bottom:2px solid #2f5d5a;
   }
   .module-num{
     font-family:'JetBrains Mono', monospace;
-    font-size:13px; color:var(--teal);
-    border:1px solid var(--teal); border-radius:2px;
+    font-size:13px; color:#2f5d5a;
+    border:1px solid #2f5d5a; border-radius:2px;
     padding:2px 7px;
+    background-color:#f0ede4;
   }
   .module h2{
     font-family:'Cormorant Garamond', serif;
     font-weight:600; font-size:27px; margin:0; line-height:1.2;
+    color:#20242b;
   }
   .module p{
     margin:0 0 17px; text-align:justify; hyphens:auto;
+    color:#20242b;
   }
   .module p:first-of-type::first-letter{
     font-family:'Cormorant Garamond', serif;
-    font-size:44px; font-weight:600; color:var(--teal);
+    font-size:44px; font-weight:600; color:#2f5d5a;
     float:left; line-height:0.82; padding-right:8px; padding-top:6px;
   }
 
@@ -1680,13 +1694,13 @@ body.paginated main{padding-bottom:120px;}
     text-align:center; padding-top:38px; margin-top:16px;
     border-top:1px solid var(--rule);
     font-family:'JetBrains Mono', monospace;
-    color:var(--ink-soft); font-size:12.5px; letter-spacing:.04em;
+    color:#454d58; font-size:12.5px; letter-spacing:.04em;
   }
 
   a.top{
     position:fixed; bottom:28px; right:28px;
     width:42px; height:42px; border-radius:50%;
-    background:var(--teal); color:var(--paper);
+    background-color:#2f5d5a; color:#f0ede4;
     display:flex; align-items:center; justify-content:center;
     text-decoration:none; font-size:18px;
     box-shadow:0 4px 14px rgba(0,0,0,.18);
@@ -1701,6 +1715,11 @@ body.paginated main{padding-bottom:120px;}
     .strand-key{gap:10px 14px;}
   }
   @media print{ a.top{display:none;} body{background:#fff;} }
+
+  @media (prefers-color-scheme: dark){
+    html, body{ background-color:#f0ede4 !important; color:#20242b !important; }
+    .module p, .module h2, .cover h1, .toc-title{ color:#20242b !important; }
+  }
 </style>
 </head>
 <body>
@@ -1721,23 +1740,23 @@ body.paginated main{padding-bottom:120px;}
   <nav class="toc">
     <h3>Contents</h3>
     <ul>
-<li><a href="#what-v-cika-abhinaya-actually-is"><span class="toc-num">01</span><span class="toc-title">What Vācika Abhinaya Actually Is</span></a></li>
-<li><a href="#the-stras-that-ground-this-module"><span class="toc-num">02</span><span class="toc-title">The Śāstras That Ground This Module</span></a></li>
-<li><a href="#how-the-brain-produces-speech-the-basic-circuit"><span class="toc-num">03</span><span class="toc-title">How the Brain Produces Speech: The Basic Circuit</span></a></li>
-<li><a href="#the-gu-as-as-a-map-of-a-trainable-motor-acoustic-system"><span class="toc-num">04</span><span class="toc-title">The Guṇas as a Map of a Trainable Motor-Acoustic System</span></a></li>
-<li><a href="#breath-the-diaphragm-and-subglottal-pressure"><span class="toc-num">05</span><span class="toc-title">Breath, the Diaphragm, and Subglottal Pressure</span></a></li>
+<li><a href="#what-vacika-abhinaya-actually-is"><span class="toc-num">01</span><span class="toc-title">What Vācika Abhinaya Actually Is</span></a></li>
+<li><a href="#the-sastras-that-ground-this-module"><span class="toc-num">02</span><span class="toc-title">The Śāstras That Ground This Module</span></a></li>
+<li><a href="#how-the-brain-produces-speech"><span class="toc-num">03</span><span class="toc-title">How the Brain Produces Speech: The Basic Circuit</span></a></li>
+<li><a href="#the-gunas-as-a-map"><span class="toc-num">04</span><span class="toc-title">The Guṇas as a Map of a Trainable Motor-Acoustic System</span></a></li>
+<li><a href="#breath-diaphragm-subglottal-pressure"><span class="toc-num">05</span><span class="toc-title">Breath, the Diaphragm, and Subglottal Pressure</span></a></li>
 <li><a href="#emotional-prosody-and-the-limbic-system"><span class="toc-num">06</span><span class="toc-title">Emotional Prosody and the Limbic System</span></a></li>
-<li><a href="#the-autonomic-nervous-system-and-the-physical-signature-of-fear-grief-and-anger-in-the-voice"><span class="toc-num">07</span><span class="toc-title">The Autonomic Nervous System and the Physical Signature of Fear, Grief, and Anger in the Voice</span></a></li>
-<li><a href="#prosody-meter-and-the-cerebellum-s-role-in-timing"><span class="toc-num">08</span><span class="toc-title">Prosody, Meter, and the Cerebellum's Role in Timing</span></a></li>
-<li><a href="#register-social-cognition-and-the-brain-s-model-of-the-speaker"><span class="toc-num">09</span><span class="toc-title">Register, Social Cognition, and the Brain's Model of the Speaker</span></a></li>
-<li><a href="#a-practical-training-sequence-combining-the-two-traditions"><span class="toc-num">10</span><span class="toc-title">A Practical Training Sequence Combining the Two Traditions</span></a></li>
-<li><a href="#where-technique-ends-and-genuine-feeling-begins"><span class="toc-num">11</span><span class="toc-title">Where Technique Ends and Genuine Feeling Begins</span></a></li>
+<li><a href="#the-autonomic-nervous-system"><span class="toc-num">07</span><span class="toc-title">The Autonomic Nervous System and the Physical Signature of Fear, Grief, and Anger in the Voice</span></a></li>
+<li><a href="#prosody-meter-and-the-cerebellum"><span class="toc-num">08</span><span class="toc-title">Prosody, Meter, and the Cerebellum's Role in Timing</span></a></li>
+<li><a href="#register-social-cognition"><span class="toc-num">09</span><span class="toc-title">Register, Social Cognition, and the Brain's Model of the Speaker</span></a></li>
+<li><a href="#a-practical-training-sequence"><span class="toc-num">10</span><span class="toc-title">A Practical Training Sequence Combining the Two Traditions</span></a></li>
+<li><a href="#where-technique-ends"><span class="toc-num">11</span><span class="toc-title">Where Technique Ends and Genuine Feeling Begins</span></a></li>
     </ul>
   </nav>
 
   <main>
 
-  <section class="module" id="what-v-cika-abhinaya-actually-is">
+  <section class="module" id="what-vacika-abhinaya-actually-is">
     <div class="module-head">
       <span class="module-num">01</span>
       <h2>What Vācika Abhinaya Actually Is</h2>
@@ -1746,7 +1765,7 @@ body.paginated main{padding-bottom:120px;}
 <p>This is worth taking seriously as a claim about mechanism, not just aesthetics. A human voice is a physical instrument — moving air, vibrating tissue, a resonating column of throat and mouth and sinus — and every one of the emotional effects classical dramaturgy asks a performer to produce corresponds to a specific, physically describable change in how that instrument is being played. What the śāstras name and catalogue as trained technique, modern voice science and neuroscience independently describe as measurable acoustic and physiological events. Neither account replaces the other; each explains a different half of the same phenomenon — the śāstra states what effect a performer should produce and for what dramatic purpose, the science explains what is actually happening in the larynx, the breath, and the brain when a performer produces it correctly.</p>
   </section>
 
-  <section class="module" id="the-stras-that-ground-this-module">
+  <section class="module" id="the-sastras-that-ground-this-module">
     <div class="module-head">
       <span class="module-num">02</span>
       <h2>The Śāstras That Ground This Module</h2>
@@ -1759,7 +1778,7 @@ body.paginated main{padding-bottom:120px;}
 <p>None of these four texts describes a brain or a larynx in the terms modern medicine uses. What they describe, with remarkable behavioral precision, is the output of a system whose internal mechanism neuroscience and laryngology only mapped in detail in the last century and a half. The rest of this module works through vācika abhinaya's major technical claims one at a time, stating the śāstric claim, then the scientific mechanism behind it, then the practical exercise that trains it.</p>
   </section>
 
-  <section class="module" id="how-the-brain-produces-speech-the-basic-circuit">
+  <section class="module" id="how-the-brain-produces-speech">
     <div class="module-head">
       <span class="module-num">03</span>
       <h2>How the Brain Produces Speech: The Basic Circuit</h2>
@@ -1769,7 +1788,7 @@ body.paginated main{padding-bottom:120px;}
 <p>Beneath both of these lies the motor cortex proper, which sends the actual signal down through the brainstem to the muscles of the larynx, tongue, lips, and diaphragm, and the cerebellum, which continuously fine-tunes the timing and coordination of that motor output — critically important for vācika abhinaya specifically, since the cerebellum is the structure most directly responsible for the smooth, precisely timed modulation of pitch and rhythm a trained reciter needs, and cerebellar damage characteristically produces speech that is correctly worded but oddly scanned, with abnormal rhythm and explosive, poorly graded loudness — a clinical picture that reads, uncannily, like a description of exactly the kind of untrained, poorly modulated delivery classical dramaturgy treats as a technical failure.</p>
   </section>
 
-  <section class="module" id="the-gu-as-as-a-map-of-a-trainable-motor-acoustic-system">
+  <section class="module" id="the-gunas-as-a-map">
     <div class="module-head">
       <span class="module-num">04</span>
       <h2>The Guṇas as a Map of a Trainable Motor-Acoustic System</h2>
@@ -1782,7 +1801,7 @@ body.paginated main{padding-bottom:120px;}
 <p>Read this way, the ten guṇas are not ten separate moods to be felt but ten separately trainable configurations of breath, laryngeal tension, and resonance, each producing a specific, physically describable acoustic signature — which is exactly why classical training insists on practicing each guṇa in isolation before combining them, since isolating a specific physiological configuration and drilling it repeatedly is the only reliable way to make a muscular pattern available on demand rather than as an accident of mood.</p>
   </section>
 
-  <section class="module" id="breath-the-diaphragm-and-subglottal-pressure">
+  <section class="module" id="breath-diaphragm-subglottal-pressure">
     <div class="module-head">
       <span class="module-num">05</span>
       <h2>Breath, the Diaphragm, and Subglottal Pressure</h2>
@@ -1803,7 +1822,7 @@ body.paginated main{padding-bottom:120px;}
 <p>This is exactly the physiological ground the Nāṭyaśāstra's own sāttvika category is describing when it names svarabheda, voice-breaking, as one of the involuntary states genuine emotion produces and deliberate technique cannot by itself fully substitute for — a classical dramaturgical category and a documented neurological pathway converging, independently, on the same underlying phenomenon.</p>
   </section>
 
-  <section class="module" id="the-autonomic-nervous-system-and-the-physical-signature-of-fear-grief-and-anger-in-the-voice">
+  <section class="module" id="the-autonomic-nervous-system">
     <div class="module-head">
       <span class="module-num">07</span>
       <h2>The Autonomic Nervous System and the Physical Signature of Fear, Grief, and Anger in the Voice</h2>
@@ -1815,7 +1834,7 @@ body.paginated main{padding-bottom:120px;}
 <p>A performer's craft, on this reading, consists in learning to reproduce each of these autonomically driven physiological signatures voluntarily and precisely, through the guṇas and breath control described earlier, whether or not the underlying autonomic state is actually present in full — while the tradition's own sāttvika category continues to hold that the very best and most convincing performances are the ones in which a genuine, if disciplined and controlled, version of the actual autonomic state is present as well, producing the involuntary components no amount of purely voluntary technique fully replicates.</p>
   </section>
 
-  <section class="module" id="prosody-meter-and-the-cerebellum-s-role-in-timing">
+  <section class="module" id="prosody-meter-and-the-cerebellum">
     <div class="module-head">
       <span class="module-num">08</span>
       <h2>Prosody, Meter, and the Cerebellum's Role in Timing</h2>
@@ -1825,7 +1844,7 @@ body.paginated main{padding-bottom:120px;}
 <p>This is also why sustained, high-precision metrical recitation is one of the more cognitively and motorically demanding forms of speech production, and why traditional training in both Vedic recitation and dramatic verse delivery places such heavy emphasis on extended, repetitive practice of fixed metrical patterns well before a student is permitted to apply expressive variation on top of them — the same general training principle modern motor-learning research confirms for any complex timed motor skill, in which a stable underlying pattern has to become automatic, requiring minimal conscious attention, before expressive variation can be layered on top of it without the whole performance breaking down under the combined cognitive load.</p>
   </section>
 
-  <section class="module" id="register-social-cognition-and-the-brain-s-model-of-the-speaker">
+  <section class="module" id="register-social-cognition">
     <div class="module-head">
       <span class="module-num">09</span>
       <h2>Register, Social Cognition, and the Brain's Model of the Speaker</h2>
@@ -1834,7 +1853,7 @@ body.paginated main{padding-bottom:120px;}
 <p>This is why a shift in a character's register can convey a change in status or circumstance to an audience even before the plot explicitly states it — a listener's brain is continuously and automatically updating its social model of the speaker based on register cues, and a performer who shifts a character's vocabulary and syntax downward on stage is directly manipulating that automatic inferential process rather than merely applying a decorative convention. Register-based characterization is therefore not simply a literary device inherited from courtly convention; it is a technique that works because it engages a genuine, well-documented feature of how the human brain processes speech from an unfamiliar or changing speaker in real time.</p>
   </section>
 
-  <section class="module" id="a-practical-training-sequence-combining-the-two-traditions">
+  <section class="module" id="a-practical-training-sequence">
     <div class="module-head">
       <span class="module-num">10</span>
       <h2>A Practical Training Sequence Combining the Two Traditions</h2>
@@ -1847,7 +1866,7 @@ body.paginated main{padding-bottom:120px;}
 <p>The fifth and final stage introduces genuine emotional recall — deliberately, briefly summoning a real remembered instance of grief, anger, or joy immediately before delivering a line built around the corresponding rasa — on the understanding, consistent with the tradition's own account of sāttvika abhinaya, that the involuntary autonomic and limbic contributions to vocal quality described earlier cannot be manufactured by breath and guṇa technique alone, and that a performer's disciplined cultivation of genuine, brief, controlled emotional access is what allows those involuntary contributions to appear reliably on cue without overwhelming the performer's continued technical control of breath, pitch, and register.</p>
   </section>
 
-  <section class="module" id="where-technique-ends-and-genuine-feeling-begins">
+  <section class="module" id="where-technique-ends">
     <div class="module-head">
       <span class="module-num">11</span>
       <h2>Where Technique Ends and Genuine Feeling Begins</h2>
@@ -1863,6 +1882,9 @@ body.paginated main{padding-bottom:120px;}
 </div>
 
 <a class="top" href="#top" title="Back to top">↑</a>
+
+</body>
+</html>
   <!DOCTYPE html>
 <html lang="en">
 <head>
