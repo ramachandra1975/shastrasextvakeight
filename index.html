@@ -1863,6 +1863,627 @@ body.paginated main{padding-bottom:120px;}
 </div>
 
 <a class="top" href="#top" title="Back to top">↑</a>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Āṅgika, Āhārya, Sāttvika Abhinaya — Module IV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f0ede4;
+    --ink:#20242b;
+    --ink-soft:#454d58;
+    --teal:#2f5d5a;
+    --gold:#8a6d2f;
+    --rust:#8a3d2f;
+    --rule: rgba(32,36,43,0.14);
+    --max-w: 780px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 700px at 90% -10%, rgba(47,93,90,0.06), transparent 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Lora', Georgia, serif;
+    font-size:18px;
+    line-height:1.75;
+  }
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px 140px;}
+
+  .cover{
+    padding:88px 0 56px;
+    text-align:center;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:52px;
+  }
+  .cover .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--teal);
+    margin-bottom:20px;
+  }
+  .cover h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(34px, 6vw, 54px);
+    line-height:1.1;
+    margin:0 0 16px;
+  }
+  .cover .sub{
+    font-family:'Lora', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:600px;
+    margin:0 auto;
+  }
+  .cover .badge{
+    display:inline-block;
+    margin-top:26px;
+    padding:6px 14px;
+    border:1px solid var(--teal);
+    color:var(--teal);
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    border-radius:2px;
+  }
+  .strand-key{
+    display:flex; justify-content:center; gap:18px; flex-wrap:wrap;
+    margin-top:28px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+  }
+  .strand-key span{ display:flex; align-items:center; gap:6px; }
+  .dot{ width:8px; height:8px; border-radius:50%; display:inline-block; }
+
+  .toc{ margin-bottom:60px; }
+  .toc h3{
+    font-family:'JetBrains Mono', monospace;
+    font-weight:500;
+    font-size:12.5px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 18px;
+  }
+  .toc .toc-part{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--rust);
+    margin:26px 0 6px;
+  }
+  .toc .toc-part:first-child{ margin-top:0; }
+  .toc ul{ list-style:none; margin:0; padding:0; }
+  .toc a{
+    display:flex; gap:14px; align-items:baseline;
+    padding:9px 0;
+    text-decoration:none;
+    color:var(--ink-soft);
+    border-bottom:1px solid var(--rule);
+    font-size:15.5px;
+    transition:color .15s ease, padding-left .15s ease;
+  }
+  .toc a:hover{ color:var(--teal); padding-left:6px; }
+  .toc-num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    color:var(--gold);
+    min-width:26px;
+  }
+  .toc-title{ font-family:'Cormorant Garamond', serif; font-size:17px; }
+
+  .part-divider{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--rust);
+    text-align:center;
+    margin:64px 0 30px;
+    padding-top:44px;
+    border-top:2px solid var(--rust);
+  }
+  .part-divider .part-sub{
+    display:block;
+    margin-top:8px;
+    font-family:'Lora', serif;
+    font-style:italic;
+    text-transform:none;
+    letter-spacing:0;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+
+  .module{ padding-top:12px; margin-bottom:56px; }
+  .module-head{
+    display:flex; align-items:baseline; gap:16px;
+    margin-bottom:20px; padding-bottom:13px;
+    border-bottom:2px solid var(--teal);
+  }
+  .module-num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px; color:var(--teal);
+    border:1px solid var(--teal); border-radius:2px;
+    padding:2px 7px;
+  }
+  .module h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600; font-size:27px; margin:0; line-height:1.2;
+  }
+  .module p{
+    margin:0 0 17px; text-align:justify; hyphens:auto;
+  }
+  .module p:first-of-type::first-letter{
+    font-family:'Cormorant Garamond', serif;
+    font-size:44px; font-weight:600; color:var(--teal);
+    float:left; line-height:0.82; padding-right:8px; padding-top:6px;
+  }
+
+  footer{
+    text-align:center; padding-top:38px; margin-top:16px;
+    border-top:1px solid var(--rule);
+    font-family:'JetBrains Mono', monospace;
+    color:var(--ink-soft); font-size:12.5px; letter-spacing:.04em;
+  }
+
+  a.top{
+    position:fixed; bottom:28px; right:28px;
+    width:42px; height:42px; border-radius:50%;
+    background:var(--teal); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none; font-size:18px;
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    opacity:.85;
+  }
+  a.top:hover{ opacity:1; }
+
+  @media (max-width:600px){
+    body{font-size:16.5px;}
+    .cover{padding:60px 0 40px;}
+    .module h2{font-size:22px;}
+    .strand-key{gap:10px 14px;}
+  }
+  @media print{ a.top{display:none;} body{background:#fff;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="cover">
+    <div class="eyebrow">Series A · Part IX · Module IV of V</div>
+    <h1>Āṅgika, Āhārya, Sāttvika Abhinaya</h1>
+    <p class="sub">The Body, the Adornment, and the Involuntary Sign — Read Through Motor Neuroscience, Material Semiotics, Autonomic Physiology, and the Śāstras That Codified Them First</p>
+    <div class="badge">The Three Remaining Instruments</div>
+    <div class="strand-key">
+      <span><span class="dot" style="background:#2f5d5a"></span>Neuroscience &amp; medicine</span>
+      <span><span class="dot" style="background:#8a6d2f"></span>Śāstric source</span>
+      <span><span class="dot" style="background:#454d58"></span>Practical training</span>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <h3>Contents</h3>
+    <div class="toc-part">Part A · Āṅgika Abhinaya — The Body</div>
+    <ul>
+<li><a href="#angikaa-01"><span class="toc-num">01</span><span class="toc-title">What Āṅgika Abhinaya Actually Is</span></a></li>
+<li><a href="#angikaa-02"><span class="toc-num">02</span><span class="toc-title">The Śāstras That Ground This Part</span></a></li>
+<li><a href="#angikaa-03"><span class="toc-num">03</span><span class="toc-title">The Motor Homunculus and the Hand's Disproportionate Territory</span></a></li>
+<li><a href="#angikaa-04"><span class="toc-num">04</span><span class="toc-title">The Basal Ganglia and the Selection of Movement</span></a></li>
+<li><a href="#angikaa-05"><span class="toc-num">05</span><span class="toc-title">The Cerebellum and Fluid Gesture Sequencing</span></a></li>
+<li><a href="#angikaa-06"><span class="toc-num">06</span><span class="toc-title">Mirror Neurons and the Legibility of Gesture</span></a></li>
+<li><a href="#angikaa-07"><span class="toc-num">07</span><span class="toc-title">The Hastas as a Combinatorial Sign System</span></a></li>
+<li><a href="#angikaa-08"><span class="toc-num">08</span><span class="toc-title">Proprioception and the Performer's Body-Map</span></a></li>
+<li><a href="#angikaa-09"><span class="toc-num">09</span><span class="toc-title">The Head, the Neck, and the Vestibular System</span></a></li>
+<li><a href="#angikaa-10"><span class="toc-num">10</span><span class="toc-title">Dṛṣṭibheda: The Eyes and the Neuroscience of Gaze</span></a></li>
+<li><a href="#angikaa-11"><span class="toc-num">11</span><span class="toc-title">Upāṅga: Facial Musculature and Micro-Expression</span></a></li>
+<li><a href="#angikaa-12"><span class="toc-num">12</span><span class="toc-title">Cārī, Sthāna, and the Perception of Biological Motion</span></a></li>
+<li><a href="#angikaa-13"><span class="toc-num">13</span><span class="toc-title">A Practical Training Sequence for Āṅgika Abhinaya</span></a></li>
+    </ul>
+    <div class="toc-part">Part B · Āhārya Abhinaya — The Adornment</div>
+    <ul>
+<li><a href="#aharya-14"><span class="toc-num">14</span><span class="toc-title">What Āhārya Abhinaya Actually Is</span></a></li>
+<li><a href="#aharya-15"><span class="toc-num">15</span><span class="toc-title">The Śāstras That Ground This Part</span></a></li>
+<li><a href="#aharya-16"><span class="toc-num">16</span><span class="toc-title">Rapid Visual Categorization: How the Brain Reads a Figure at a Glance</span></a></li>
+<li><a href="#aharya-17"><span class="toc-num">17</span><span class="toc-title">Varṇa: Color Symbolism and the Physiology of Chromatic Response</span></a></li>
+<li><a href="#aharya-18"><span class="toc-num">18</span><span class="toc-title">The Fusiform Face Area, Masks, and Aṅgaracanā</span></a></li>
+<li><a href="#aharya-19"><span class="toc-num">19</span><span class="toc-title">Semiotics of Adornment: Sign, Signifier, Code</span></a></li>
+<li><a href="#aharya-20"><span class="toc-num">20</span><span class="toc-title">How Āhārya Interacts With Āṅgika and Vācika in Practice</span></a></li>
+    </ul>
+    <div class="toc-part">Part C · Sāttvika Abhinaya — The Involuntary Sign</div>
+    <ul>
+<li><a href="#sattvika-21"><span class="toc-num">21</span><span class="toc-title">What Sāttvika Abhinaya Actually Is</span></a></li>
+<li><a href="#sattvika-22"><span class="toc-num">22</span><span class="toc-title">The Śāstras: The Eight Sāttvika Bhāvas Enumerated</span></a></li>
+<li><a href="#sattvika-23"><span class="toc-num">23</span><span class="toc-title">The Autonomic Nervous System: Sympathetic and Parasympathetic</span></a></li>
+<li><a href="#sattvika-24"><span class="toc-num">24</span><span class="toc-title">Stambha — Freezing and the Physiology of Immobility</span></a></li>
+<li><a href="#sattvika-25"><span class="toc-num">25</span><span class="toc-title">Sveda — Sweating and Sympathetic Sudomotor Activation</span></a></li>
+<li><a href="#sattvika-26"><span class="toc-num">26</span><span class="toc-title">Romāñca — Horripilation and the Arrector Pili Reflex</span></a></li>
+<li><a href="#sattvika-27"><span class="toc-num">27</span><span class="toc-title">Svarabheda Revisited From the Involuntary Side</span></a></li>
+<li><a href="#sattvika-28"><span class="toc-num">28</span><span class="toc-title">Vepathu — Trembling and Motor Tremor Under Load</span></a></li>
+<li><a href="#sattvika-29"><span class="toc-num">29</span><span class="toc-title">Vaivarṇya — Pallor and the Vasomotor Response</span></a></li>
+<li><a href="#sattvika-30"><span class="toc-num">30</span><span class="toc-title">Aśru — Tears and the Lacrimal Reflex Under Emotion</span></a></li>
+<li><a href="#sattvika-31"><span class="toc-num">31</span><span class="toc-title">Pralaya — Dissolution and Vasovagal Syncope</span></a></li>
+<li><a href="#sattvika-32"><span class="toc-num">32</span><span class="toc-title">A Polyvagal Reading of Layered Autonomic States</span></a></li>
+<li><a href="#sattvika-33"><span class="toc-num">33</span><span class="toc-title">Can the Involuntary Be Trained? The Central Paradox</span></a></li>
+<li><a href="#sattvika-34"><span class="toc-num">34</span><span class="toc-title">A Practical, Necessarily Limited Approach to Sāttvika Training</span></a></li>
+    </ul>
+    <div class="toc-part">Part D · Synthesis</div>
+    <ul>
+<li><a href="#synth-35"><span class="toc-num">35</span><span class="toc-title">How the Four Abhinayas Integrate as a Single System</span></a></li>
+<li><a href="#synth-36"><span class="toc-num">36</span><span class="toc-title">A Combined Training Sequence Across All Four Channels</span></a></li>
+<li><a href="#synth-37"><span class="toc-num">37</span><span class="toc-title">Where This Module Leads: Toward Rasa as Convergence</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+  <div class="part-divider">Part A — Āṅgika Abhinaya<span class="part-sub">The body as instrument</span></div>
+
+  <section class="module" id="angikaa-01">
+    <div class="module-head">
+      <span class="module-num">01</span>
+      <h2>What Āṅgika Abhinaya Actually Is</h2>
+    </div>
+    <p>Āṅgika abhinaya is the channel of dramatic expression carried by the body — every voluntary movement of limb, hand, head, neck, torso, and eye that a trained performer deploys to make a dramatic meaning visible without a single word being spoken. Where Module III examined how a line of dialogue can be delivered in ways that change its emotional weight, this part examines what happens when the line is dropped entirely and the body alone is asked to carry the same information: a narrative event, a character's internal state, a spatial relationship between two people who are not really standing where the choreography places them. The claim underlying the whole discipline is that the body, correctly trained, is exactly as expressively precise as speech — not a vaguer, softer substitute for language but a second, parallel sign system with its own grammar, and the Nāṭyaśāstra treats it with the same taxonomic rigor it applies to vācika abhinaya, cataloguing the body's expressive units down to the level of individual finger positions and eye movements.</p>
+<p>This module's method, established in Module III, continues unchanged: for each major technical claim the Nāṭyaśāstra and its dependent texts make about the trained body, this part states the claim, identifies the physical or neural mechanism modern science has independently mapped, and closes with a practical exercise that trains it. The three channels covered in this module — āṅgika, āhārya, and sāttvika — are grouped together here because, unlike vācika, none of them is exclusively about the performer's trained skill alone; each one implicates something partly outside the performer's full voluntary control, whether that is the physical properties of costume and paint, or the involuntary nervous system this part will spend its third section examining in detail. Āṅgika sits at the boundary of that spectrum: almost entirely trainable and voluntary, and yet, as the sections on mirror neurons and proprioception will show, dependent on neural machinery a performer does not consciously operate even while producing movement that is, in every meaningful sense, deliberate.</p>
+  </section>
+
+  <section class="module" id="angikaa-02">
+    <div class="module-head">
+      <span class="module-num">02</span>
+      <h2>The Śāstras That Ground This Part</h2>
+    </div>
+    <p>The Nāṭyaśāstra's own chapters on āṅgika abhinaya establish the foundational taxonomy: the body is divided into aṅga, the six major limbs — head, hands, chest, sides, hips, and feet — and upāṅga, the minor or subsidiary limbs, principally the parts of the face: the eyes, eyebrows, nose, lower lip, chin, and the various regions of cheek and jaw capable of independent, meaningful movement. A further category, pratyaṅga, covers intermediate zones — the shoulders, the arms, the back, the belly, the waist — that are neither major limbs in their own right nor facial subtleties, but that nonetheless carry expressive weight, particularly in postural and weight-bearing movement. This three-tier division is not merely descriptive; it is the organizing structure the text uses to work systematically through the entire body's expressive vocabulary, limb by limb, in a degree of granularity that has no real precedent in any other classical performance tradition of comparable antiquity.</p>
+<p>The Abhinaya Darpaṇa, composed centuries after the Nāṭyaśāstra and specifically as a practical performer's manual rather than a comprehensive dramaturgical treatise, narrows and systematizes this material further, and is the text most directly responsible for the twenty-eight single-hand hastas and the twenty-four combined-hand hastas that remain the working vocabulary of most classical Indian dance and mime traditions practiced today. Where the Nāṭyaśāstra explains what a gesture accomplishes dramaturgically, the Abhinaya Darpaṇa is closer to a technical reference: it names each hasta, describes the precise finger configuration required to form it correctly, and lists the specific meanings — sometimes a dozen or more per hasta — that the same hand-shape can carry depending on context, a one-to-many mapping this module's later section on combinatorial sign systems returns to directly.</p>
+<p>A third text, the Hastalakṣaṇadīpikā, functions as a further regional and lineage-specific elaboration of hasta usage, while the dance-specific chapters of the Saṅgītaratnākara extend the vocabulary into cārīs — codified patterns of leg and foot movement — and sthānas, the codified standing postures a performer's weight and stance are expected to hold during different categories of dramatic action. Taken together, these texts do for the body what Śikṣā and Chandas-śāstra did for speech in Module III: they supply an exhaustive, physiologically exact behavioral catalogue centuries before any scientific vocabulary existed to describe the neural systems actually producing that behavior.</p>
+  </section>
+
+  <section class="module" id="angikaa-03">
+    <div class="module-head">
+      <span class="module-num">03</span>
+      <h2>The Motor Homunculus and the Hand's Disproportionate Territory</h2>
+    </div>
+    <p>The primary motor cortex, a narrow strip of tissue running across the top of the brain just in front of the central sulcus, is organized somatotopically — meaning each part of the body is controlled by a distinct, spatially mapped region of this cortical strip, and the classical diagrammatic representation of this mapping, the motor homunculus, is famous precisely because it is so badly out of proportion with the actual human body it represents. The territory devoted to the hand and fingers is vastly larger than the territory devoted to the entire trunk, despite the trunk being many times larger in physical mass, and the territory devoted to the face — particularly the lips and tongue — is comparably disproportionate. This is not an aesthetic accident of brain organization; cortical territory scales with the fineness of motor control a body part requires, not with its size, and the hand and face require an extraordinary degree of independent, fine-grained control to produce the movements ordinary manipulation and speech demand.</p>
+<p>This single fact of neuroanatomy is, in effect, a direct physiological explanation for why the Nāṭyaśāstra's hasta vocabulary is as combinatorially rich as it is, and why it is the hand rather than, say, the elbow or the knee that classical choreography treats as the primary bearer of fine semantic content. A performer's hands are capable of an enormous range of independently controllable finger configurations precisely because the brain has allocated a correspondingly enormous amount of dedicated processing territory to them — considerably more, relative to the hand's actual physical size, than to any other body part apart from the mouth and the region immediately around the eyes, which is itself relevant to the module's later treatment of upāṅga and gaze. The twenty-eight single-hand hastas of the Abhinaya Darpaṇa are, from this angle, not an arbitrarily large vocabulary imposed on the hand by dramaturgical convention, but something closer to a systematic exploitation of a genuinely exceptional degree of biological fine-motor capacity that exists in the hand for entirely unrelated evolutionary reasons — tool use, precision grip, manipulation — and that classical performance training simply repurposes for communicative ends.</p>
+  </section>
+
+  <section class="module" id="angikaa-04">
+    <div class="module-head">
+      <span class="module-num">04</span>
+      <h2>The Basal Ganglia and the Selection of Movement</h2>
+    </div>
+    <p>Planning a movement and selecting which movement to make from among several competing possibilities are, neurologically, distinct operations, and the second of these — selection — is handled substantially by a group of structures deep in the forebrain collectively known as the basal ganglia, working in continuous circuit with the motor cortex and the thalamus. The basal ganglia's characteristic contribution is not generating movement directly but gating it: suppressing competing, unwanted movement patterns while permitting a single selected pattern through to execution, and modulating the vigor, speed, and amplitude with which that selected movement is actually carried out. This gating function is why basal ganglia dysfunction produces two apparently opposite clinical pictures depending on which part of the circuit is affected — an excess of unwanted, intrusive movement in one direction, or a poverty and slowness of movement, a difficulty initiating action at all, in the other — both of which are failures of the same underlying selection-and-gating mechanism operating too loosely or too tightly.</p>
+<p>For a performer executing rapid, precisely sequenced hasta transitions — moving cleanly from one named hand configuration directly into the next, at a tempo dictated by musical phrasing rather than by comfortable, unhurried pacing — this selection-and-gating system is under continuous, heavy demand, since each transition requires suppressing the residual muscular pattern of the previous hasta while cleanly initiating the next one without a smeared, ambiguous intermediate shape appearing on stage. Untrained performers characteristically show exactly the kind of gating failure basal ganglia dysfunction produces in miniature: a lingering trace of the prior hand-shape bleeding into the next, or hesitant, poorly initiated transitions that read on stage as uncertainty even when the performer's underlying knowledge of the correct sequence is entirely secure. Classical training's insistence on drilling hasta transitions in isolated, repeated sequence — the same exercise appears, independently, in modern motor-skill pedagogy for any task requiring rapid, clean switching between discrete hand configurations — is best understood as training this basal ganglia gating circuit specifically, sharpening the speed and cleanliness with which one motor pattern is suppressed and the next released.</p>
+  </section>
+
+  <section class="module" id="angikaa-05">
+    <div class="module-head">
+      <span class="module-num">05</span>
+      <h2>The Cerebellum and Fluid Gesture Sequencing</h2>
+    </div>
+    <p>Module III introduced the cerebellum's role in the fine timing of recitation; the same structure performs an analogous function for the body, and its contribution to āṅgika abhinaya is, if anything, more visible on stage than its contribution to speech, because gesture sequencing errors are directly seen by an audience in a way that small timing errors in recitation are not always directly heard. The cerebellum receives a continuous stream of proprioceptive feedback from the muscles and joints — information about where each limb currently is in space — and uses it to smooth and correct an ongoing movement in real time, adjusting the trajectory of a gesture microsecond by microsecond so that the movement arrives at its target configuration cleanly rather than overshooting and correcting in a visible, jerky secondary adjustment.</p>
+<p>This is the physiological basis for the specific quality classical dance criticism singles out in an accomplished performer's transitions — a fluid, continuous quality in which one hasta or one cārī flows into the next without a visible seam, as opposed to the discrete, separately-executed-looking movements of an untrained body. Cerebellar damage produces a clinical movement disorder in which reaching and pointing movements become clumsy, poorly aimed, and characterized by exactly this kind of visible overshoot-and-correct pattern, along with a broader inability to smoothly chain a sequence of separate movements into one continuous action — a condition that, transposed onto a dance stage, would be immediately and severely disqualifying, and that gives a fairly precise physiological account of why untrained gesture reads as untrained even when every individual hasta shape, held static and inspected in isolation, is technically correct.</p>
+  </section>
+
+  <section class="module" id="angikaa-06">
+    <div class="module-head">
+      <span class="module-num">06</span>
+      <h2>Mirror Neurons and the Legibility of Gesture</h2>
+    </div>
+    <p>A gesture is only useful dramaturgically if an audience can read it correctly, and the neuroscience of how an observer's brain processes another person's movement turns out to bear directly on why certain gestures are more immediately legible than others. Mirror neurons — first documented in primate motor cortex and subsequently supported by a substantial body of human neuroimaging evidence — are neurons that activate both when an individual performs a specific action and when that individual merely observes someone else performing the same action, effectively simulating the observed movement in the observer's own motor system without any actual movement taking place. This mirroring response is thought to be one of the mechanisms underlying an observer's rapid, largely automatic ability to recognize and interpret another person's physical action, including actions that carry no literal, arbitrary symbolic meaning at all — a mime of pouring water is understood immediately, cross-culturally, because the observer's own motor system partially simulates the pouring action while watching it.</p>
+<p>This has a direct bearing on the Nāṭyaśāstra's own internal distinction between lokadharmī gestures, which imitate an ordinary real-world action closely enough that an untrained audience member recognizes them immediately, and nāṭyadharmī gestures, which are stylized, conventionalized, and require the audience to have learned the convention before the gesture becomes legible at all. Lokadharmī gestures are, on this reading, precisely the category of movement that mirror-neuron-mediated recognition handles without training, since they closely enough resemble an ordinary action the observer has themselves performed or seen performed; nāṭyadharmī gestures, by contrast, require a different and slower cognitive route — learned symbolic association rather than direct motor simulation — which is exactly why classical training treats them as needing explicit instruction while lokadharmī movement is comparatively self-explanatory even to a first-time viewer. A choreographer's decision about which register to use for a given dramatic moment is, in this light, also implicitly a decision about which of two quite different neural recognition pathways in the audience's brain is being addressed.</p>
+  </section>
+
+  <section class="module" id="angikaa-07">
+    <div class="module-head">
+      <span class="module-num">07</span>
+      <h2>The Hastas as a Combinatorial Sign System</h2>
+    </div>
+    <p>The twenty-eight asaṃyuta, or single-hand, hastas and the twenty-four saṃyuta, or combined-hand, hastas that the Abhinaya Darpaṇa codifies do not each carry a single fixed meaning; the great majority carry a substantial list of distinct meanings, disambiguated entirely by context — by the accompanying facial expression, by the direction and quality of movement the hand executes while holding the shape, by its position relative to the body, and by the surrounding narrative moment. The paṭāka hasta, formed with all four fingers extended and joined and the thumb bent across the palm, can by itself indicate a forest, a river, night, denial, the beginning of a dance sequence, or a flag, among a considerably longer list — the specific meaning fixed only by everything else happening around it at that moment.</p>
+<p>This is, structurally, exactly the kind of combinatorial system linguistics recognizes in phonology, where a small closed inventory of base units combines and recombines, disambiguated by context, to produce a very much larger space of possible meanings than the raw inventory size alone would suggest — the same underlying design principle Module III's treatment of the guṇas and the earlier parts of this series' treatment of Mātṛkā already established for the phonemic layer of Vāk. The hasta system applies the identical principle to the visual-gestural channel: a comparatively small, learnable inventory of base hand-shapes, combined with movement, orientation, facial co-articulation, and narrative context, generating a semantic range that in practice is limited only by a trained performer's skill in combining the available units cleanly. Neurologically, this places a heavy demand specifically on the basal ganglia's selection mechanism described earlier, since correctly combining a base hasta with the right accompanying movement and facial expression in real time, at performance tempo, requires several motor and expressive subsystems to be gated and coordinated simultaneously rather than sequentially.</p>
+  </section>
+
+  <section class="module" id="angikaa-08">
+    <div class="module-head">
+      <span class="module-num">08</span>
+      <h2>Proprioception and the Performer's Body-Map</h2>
+    </div>
+    <p>Proprioception — the sense, distinct from vision, touch, hearing, taste, and smell, by which the nervous system continuously tracks the position, angle, and movement of every joint and muscle in the body without needing to look at them — is what allows a trained performer to hold a precise sthāna, or codified standing posture, and know with confidence that their weight distribution, spinal alignment, and limb angles match the required configuration, without needing a mirror to check. Specialized sensory receptors embedded in muscle spindles and joint capsules continuously report tension and angle information to the spinal cord and brain, which integrates this stream into a constantly updated internal body-map — a working, largely unconscious representation of where every part of the body currently is in three-dimensional space.</p>
+<p>This internal body-map is not fixed at birth; it is substantially refined and sharpened by extended, repetitive training, which is why an experienced dancer can hold a demanding sthāna for a considerably longer duration, with far less conscious monitoring effort and far greater postural precision, than a beginner attempting the identical posture for the first time — the beginner is relying heavily on visual feedback and conscious correction, a slow and effortful route, where the trained performer's refined proprioceptive map handles the same task automatically and with far greater precision. Loss of proprioceptive function, seen clinically in certain peripheral neuropathies, produces a striking and instructive deficit: affected individuals can still move their limbs using visual guidance and remaining sensory information, but lose the ability to hold a static posture accurately with their eyes closed, and their movement becomes visibly uncoordinated and effortful in exactly the way an untrained performer's uncertain sthāna work resembles — independent confirmation that the fluency of a well-trained standing posture depends on a genuinely separate, trainable sensory channel rather than on visual monitoring or willpower alone.</p>
+  </section>
+
+  <section class="module" id="angikaa-09">
+    <div class="module-head">
+      <span class="module-num">09</span>
+      <h2>The Head, the Neck, and the Vestibular System</h2>
+    </div>
+    <p>The Nāṭyaśāstra catalogues a specific set of codified head movements — among them a level, steady head position used for ordinary calm address, a slow circling movement associated with wonder or deep thought, and sharper, more sudden movements associated with alarm or refusal — each treated as an independently meaningful unit of āṅgika vocabulary in its own right, separate from and combinable with facial expression and hand gesture. Executing these head movements with precision, particularly the slower, more sustained circular and swaying movements, depends heavily on the vestibular system, the balance-sensing apparatus housed in the inner ear, which continuously reports the head's orientation and rate of rotation to the brain and works in close coordination with the neck's own proprioceptive feedback and with the visual system to keep gaze stable even as the head itself is moving.</p>
+<p>A slow, controlled head movement of the kind classical technique demands requires the vestibular system and the neck musculature to work in a tightly coupled way that is considerably more demanding than an equivalent, faster, more reflexive head turn of the kind ordinary daily movement involves — sustained slow movement against gravity and against the vestibular system's own reflexive stabilization tendencies requires active muscular control that a quick, ballistic head movement largely bypasses. This is a plausible physiological reason why codified slow head movements are treated in training as requiring extended, dedicated practice separate from faster head gestures, and why performers experiencing vestibular dysfunction — a documented occupational concern for dancers who perform frequent, repeated rotational movement — report specific, measurable difficulty with exactly this category of slow, sustained head control even when other aspects of their physical technique remain entirely unaffected.</p>
+  </section>
+
+  <section class="module" id="angikaa-10">
+    <div class="module-head">
+      <span class="module-num">10</span>
+      <h2>Dṛṣṭibheda: The Eyes and the Neuroscience of Gaze</h2>
+    </div>
+    <p>The Nāṭyaśāstra's treatment of dṛṣṭibheda, the classification of eye movements and gaze qualities, is among the most granular sections of its entire āṅgika chapter, distinguishing a substantial number of named gaze types by the specific combination of eyelid position, eyeball direction, and quality of movement involved — a steady, level gaze for calm address, a sidelong glance for suspicion or coy address, an upward gaze for divine address or extreme emotional states, among many others. This granularity is not disproportionate to the eye's actual expressive range; the eye is capable of an unusually large number of independently controllable parameters — six extraocular muscles per eye controlling direction, plus eyelid position controlled by an entirely separate muscle group, plus pupil diameter controlled by yet another, involuntary system — giving the eye region a genuinely exceptional degree of fine motor variability relative to its small physical size.</p>
+<p>Gaze direction carries a specific and well-documented social-cognitive weight in human perception more broadly: the human brain contains dedicated neural machinery, concentrated in the superior temporal sulcus, specifically tuned to detecting and interpreting where another person's eyes are pointed, a capacity that operates rapidly and largely automatically and that underlies the ordinary social experience of feeling directly looked at versus looked past. A performer's controlled use of dṛṣṭibheda is, in effect, a deliberate manipulation of this same automatic gaze-detection machinery in the audience — directing not just the audience's attention but their inferred sense of where the character's own attention and emotional focus lie, which is precisely the dramaturgical function the Nāṭyaśāstra assigns to gaze work, particularly in passages where a performer must indicate an imagined character or object that is not physically present on stage, using gaze direction alone to make the audience's own attention track toward the same invisible point.</p>
+  </section>
+
+  <section class="module" id="angikaa-11">
+    <div class="module-head">
+      <span class="module-num">11</span>
+      <h2>Upāṅga: Facial Musculature and Micro-Expression</h2>
+    </div>
+    <p>Beyond the eyes specifically, the Nāṭyaśāstra's upāṅga category covers the eyebrows, nose, lower lip, chin, cheeks, and jaw as independently meaningful expressive units, and modern facial-expression research offers a close, if independently derived, parallel: the facial musculature contains a genuinely large number of small, independently controllable muscles — over forty distinct muscles in the human face, considerably more than almost any other comparably sized region of the body — capable of producing an extremely wide range of distinguishable configurations, many of which are held for durations of well under a second and are correspondingly termed micro-expressions in the clinical and research literature.</p>
+<p>The facial nerve, cranial nerve VII, carries the motor signal to nearly all of this musculature from a dedicated facial motor nucleus in the brainstem, and this nucleus itself receives input from two at least partially separable cortical and subcortical pathways — a voluntary pathway, originating in motor cortex, responsible for a deliberately posed expression, and an involuntary, more directly limbic-connected pathway responsible for spontaneous emotional expression. This is why certain facial paralysis patients show a striking dissociation: they can produce a full voluntary smile on command, using the cortical pathway, but show a markedly reduced or absent spontaneous smile in response to something genuinely funny, because the separate involuntary pathway feeding the same muscles from the limbic system is the one that has been damaged — direct clinical evidence that a face trained to produce a technically correct expression on cue and a face responding to genuine feeling are, at the level of underlying neural wiring, running on two only partially overlapping systems, a distinction this module's Part C returns to at much greater length under sāttvika abhinaya specifically.</p>
+  </section>
+
+  <section class="module" id="angikaa-12">
+    <div class="module-head">
+      <span class="module-num">12</span>
+      <h2>Cārī, Sthāna, and the Perception of Biological Motion</h2>
+    </div>
+    <p>Cārīs, the codified patterns of leg and foot movement the Nāṭyaśāstra and the later dance-specific chapters of the Saṅgītaratnākara catalogue, and the sthānas, the codified standing postures already discussed under proprioception, are together the layer of āṅgika vocabulary most directly concerned with how a performer's whole-body movement through space is read by a distant audience — a viewer seated a considerable distance from the stage, unable to make out fine hasta or facial detail, but still able to read a great deal of dramatic information from gait and posture alone. This is not an incidental byproduct of stage distance; it reflects a genuine and well-documented feature of human visual perception, the capacity to extract detailed information about identity, emotional state, and intention from whole-body movement alone, even when the moving figure is reduced to nothing more than a small number of illuminated points marking major joints, a phenomenon extensively studied under the heading of biological motion perception.</p>
+<p>Human observers, tested with these reduced point-light displays, reliably identify the depicted figure's gender, approximate emotional state, and even the specific action being performed, from gait pattern and joint-movement timing alone — a capacity that develops early and appears to rely on dedicated neural processing distinct from ordinary object-motion perception, concentrated in a region of the posterior superior temporal sulcus specifically responsive to biologically plausible movement patterns and largely unresponsive to equivalent motion that has been scrambled or rendered biomechanically implausible. This gives a direct physiological grounding to the Nāṭyaśāstra's own insistence that cārī and sthāna work carry independent dramatic meaning even when performed at a distance too great for facial or hand detail to register: an audience's biological-motion perception system is doing real interpretive work on gait and posture specifically, largely independently of whatever is simultaneously happening in the face and hands, which is precisely why classical training treats correct weight distribution and gait quality as non-negotiable technical fundamentals rather than a secondary concern subordinate to hasta and facial precision.</p>
+  </section>
+
+  <section class="module" id="angikaa-13">
+    <div class="module-head">
+      <span class="module-num">13</span>
+      <h2>A Practical Training Sequence for Āṅgika Abhinaya</h2>
+    </div>
+    <p>The physiological picture assembled across this part's preceding sections yields a concrete, ordered training sequence for the body, structured on the same underlying principle Module III established for voice: simple, isolated components are automated first, and combination and expressive variation are introduced only once each component no longer requires conscious attention on its own.</p>
+<p>The first stage isolates sthāna alone, holding a single codified standing posture for a progressively increasing duration while a teacher or a mirror checks weight distribution, spinal alignment, and limb angle against the correct configuration — directly training the proprioceptive body-map described earlier, since repeated, corrected practice is what sharpens the accuracy of that internal map over time. The second stage isolates single asaṃyuta hastas one at a time, holding each hand-shape steady and correct before any movement or combination is attempted, exploiting the same isolate-then-combine principle already established for the guṇas in Module III. The third stage drills hasta-to-hasta transitions specifically — moving cleanly between two, then three, then a longer sequence of named hand-shapes at a slow, deliberately exaggerated tempo before gradually increasing speed — directly training the basal ganglia's gating mechanism and the cerebellum's smoothing function described earlier, on the understanding that transition quality, not shape accuracy alone, is what most reliably distinguishes trained from untrained gesture to a watching audience.</p>
+<p>The fourth stage introduces upāṅga in combination with hasta work — holding a specific facial configuration steady while executing a hasta sequence, checking that neither channel degrades the other under combined cognitive load, since a frequent failure mode at this stage is a performer's facial expression flattening or losing precision the moment conscious attention shifts fully onto hand-shape accuracy. The fifth and final stage combines cārī and sthāna work with hasta and upāṅga simultaneously, in short rehearsed passages, deliberately holding all four channels active at once until the combination itself becomes sufficiently automatic that a performer's remaining conscious attention is free to shift toward the material this module's next two parts address — costume, ornament, and the cultivation of the genuine underlying feeling that Part C treats as the necessary complement to everything trained so far.</p>
+  </section>
+
+  <div class="part-divider">Part B — Āhārya Abhinaya<span class="part-sub">Costume, ornament, and the material sign</span></div>
+
+  <section class="module" id="aharya-14">
+    <div class="module-head">
+      <span class="module-num">14</span>
+      <h2>What Āhārya Abhinaya Actually Is</h2>
+    </div>
+    <p>Āhārya abhinaya is the channel of dramatic expression carried by everything external to the performer's own body and voice that is nonetheless deliberately shaped to communicate: costume, makeup, ornament, headdress, and, in the classical tradition's broader treatment of the term, elements of stagecraft such as banners, painted backdrops, and constructed props. Where āṅgika and vācika abhinaya are channels the performer actively produces in real time through trained skill, āhārya is largely fixed in advance — decided, prepared, and applied before the performance begins — and communicates continuously throughout the performance without requiring the performer's ongoing conscious effort to sustain it, a structurally different kind of expressive channel from the other three, and one this part treats correspondingly differently, drawing less on motor neuroscience and considerably more on the psychology and neuroscience of visual perception, categorization, and color.</p>
+<p>The dramaturgical stakes of āhārya are nonetheless substantial: a correctly costumed and ornamented performer communicates a character's social status, moral alignment, and narrative role to an audience within a fraction of a second of first appearing on stage, well before a single gesture has been made or a single word spoken, and a considerable portion of classical Indian performance's traditional visual vocabulary — the specific colors, ornament types, and headdress forms associated with particular categories of character — exists precisely to exploit this rapid, largely pre-attentive channel of communication. This part examines what the underlying visual-cognitive machinery accomplishing that rapid read actually is, before turning to the specific śāstric material governing how āhārya choices are made.</p>
+  </section>
+
+  <section class="module" id="aharya-15">
+    <div class="module-head">
+      <span class="module-num">15</span>
+      <h2>The Śāstras That Ground This Part</h2>
+    </div>
+    <p>The Nāṭyaśāstra devotes dedicated chapters to nepathya, the general discipline of costume and stage preparation, prescribing color, ornament, and garment conventions tied to specific categories of character — divine figures, royal figures, ascetics, and the various character-types the text's broader nāyaka and nāyikā classification system distinguishes by temperament and social role. Pusta, the text's term for constructed stage properties and certain categories of body ornamentation applied rather than worn, and aṅgaracanā, the discipline of body and facial painting specifically, receive further dedicated treatment, particularly in relation to non-human and semi-divine characters — demons, animals, and deities requiring a visual transformation well beyond what costume and ornament alone accomplish.</p>
+<p>Varṇaka, the application of color to the body and face for expressive rather than merely decorative purposes, is treated with a degree of symbolic specificity that closely parallels the guṇa system Module III examined for voice: particular colors are prescribed for particular dramatic and emotional registers, red associated with fury and heroism, a pale or ashen tone associated with fear or the supernatural, and so on, forming a systematic chromatic vocabulary a trained audience is expected to read as fluently as they read vācika delivery or hasta gesture. This chromatic system is the subject of this part's dedicated section on varṇa below, read against what modern color psychology and visual neuroscience independently document about chromatic perception and its measurable emotional and physiological effects.</p>
+  </section>
+
+  <section class="module" id="aharya-16">
+    <div class="module-head">
+      <span class="module-num">16</span>
+      <h2>Rapid Visual Categorization: How the Brain Reads a Figure at a Glance</h2>
+    </div>
+    <p>Human visual perception is capable of extracting a surprisingly detailed categorical judgment from an extremely brief glance at a complex scene — a capacity well documented in visual neuroscience under the heading of rapid scene and gist perception, in which observers reliably identify the general category of a scene or figure from an exposure lasting well under a fifth of a second, a duration too brief for the kind of slow, deliberate, feature-by-feature visual analysis that conscious inspection of a static image involves. This rapid categorization draws heavily on a small number of highly salient visual cues processed in parallel — overall color palette, silhouette shape, and a handful of high-contrast distinguishing features — rather than on detailed feature analysis, which is a slower process requiring sustained attention.</p>
+<p>An audience member's first visual read of a costumed performer entering the stage is, in these terms, almost certainly operating through exactly this rapid, gist-level categorization system rather than through slow, deliberate inspection, which gives a direct cognitive-scientific reason why classical āhārya convention places such heavy emphasis on a small number of highly salient, high-contrast markers — a specific dominant color, a distinctively shaped headdress silhouette, a small number of large, clearly visible ornament pieces — rather than on fine costume detail that would only be legible under slow, close inspection. The design logic of classical costume convention, in other words, appears to be intuitively well matched to the actual bandwidth limitations of rapid human visual categorization, prioritizing exactly the coarse, high-contrast features that a viewer's visual system is capable of processing within the first fraction of a second of a character's stage entrance.</p>
+  </section>
+
+  <section class="module" id="aharya-17">
+    <div class="module-head">
+      <span class="module-num">17</span>
+      <h2>Varṇa: Color Symbolism and the Physiology of Chromatic Response</h2>
+    </div>
+    <p>Color perception begins in the retina, where three types of cone photoreceptor, each tuned to a different range of wavelengths, transduce incoming light into three separate signal streams that the visual system subsequently recombines into the full range of perceived hue; but color's effects do not stop at this purely visual stage, and a substantial body of research documents measurable physiological and emotional responses to specific hues that occur partly independently of an observer's conscious, deliberate interpretation of what a color is meant to symbolize. Longer-wavelength colors, particularly red, are associated in multiple independent lines of research with measurably increased physiological arousal — small but reliably documented increases in heart rate and skin conductance response when red stimuli are viewed compared with cooler-hued stimuli of matched brightness — an effect thought to draw partly on deep-seated associative learning linking red with blood, fire, and threat across a very wide range of human contexts and, by some accounts, with evolutionarily older, only partially cortical visual-arousal pathways.</p>
+<p>The Nāṭyaśāstra's own prescription of red for the fury sentiment and for heroic, high-arousal dramatic contexts is, on this reading, not simply an arbitrary cultural color-coding convention but a deployment of a color with a genuine, measurable, and to some extent physiologically automatic arousal-inducing effect on a viewing audience — meaning the color choice is doing at least some of its dramaturgical work through a channel that operates below the level of an audience member's conscious symbolic decoding, in parallel with whatever culturally learned association between red and fury a given audience member also separately holds. Cooler, desaturated, or pale tones, by contrast, are associated in the same body of research with measurably lower physiological arousal, consistent with the Nāṭyaśāstra's own prescription of paler, ashen coloring for fear and for supernatural or death-associated dramatic contexts, where a lowered rather than heightened arousal register better serves the intended dramatic effect.</p>
+  </section>
+
+  <section class="module" id="aharya-18">
+    <div class="module-head">
+      <span class="module-num">18</span>
+      <h2>The Fusiform Face Area, Masks, and Aṅgaracanā</h2>
+    </div>
+    <p>A region of the temporal lobe known as the fusiform face area is now well documented, through both neuroimaging and clinical lesion studies, to be specialized — considerably more strongly activated by faces than by almost any other visual category, and selectively impaired in a documented clinical condition, prosopagnosia, in which face recognition specifically is lost or severely degraded while general object recognition remains largely intact. This specialization is not absolute or exclusively face-specific, but the degree to which it is more strongly engaged by faces, and particularly by face-like configurations of features even in non-facial objects, is well established, and it operates extremely rapidly, generating an initial categorical face-detection response within a small fraction of a second of a face-like stimulus appearing in the visual field.</p>
+<p>Aṅgaracanā, the classical discipline of transformative face and body painting used for demonic, animal, and semi-divine characters, works by deliberately distorting the specific facial configuration this system is tuned to detect — exaggerating or relocating features, adding painted secondary eyes or mouths, altering the proportions the fusiform system uses to register a face as a face at all — and the uncanny, unsettling effect such transformations reliably produce on an audience is plausibly related to the resulting mismatch between a stimulus the visual system's face-detection machinery still registers as broadly face-like and one that violates the detailed configural expectations that same machinery has been tuned by a lifetime of exposure to ordinary human faces to expect. This gives one account of why aṅgaracanā for non-human and semi-divine characters is dramaturgically effective in a way that costume and ornament alone are not: it is directly manipulating specialized, rapid, largely automatic face-processing machinery rather than working through the slower channel of learned cultural symbolism that governs most of the rest of āhārya convention.</p>
+  </section>
+
+  <section class="module" id="aharya-19">
+    <div class="module-head">
+      <span class="module-num">19</span>
+      <h2>Semiotics of Adornment: Sign, Signifier, Code</h2>
+    </div>
+    <p>Beyond the specific perceptual and physiological mechanisms already discussed, āhārya operates as a full semiotic system in the more general sense the discipline of semiotics uses the term — a structured set of signs, each combining a physical signifier (a specific ornament, a specific headdress shape, a specific color) with a culturally learned signified meaning (royal status, ascetic renunciation, divine identity), the pairing between the two fixed not by any natural or perceptually necessary connection but by an established convention a trained audience has learned over repeated exposure to the tradition. This is the layer of āhārya that operates through slow, learned, culturally specific decoding rather than through the faster, more universal perceptual channels the preceding sections examined, and the two layers work simultaneously and in parallel on a viewing audience — the immediate, largely automatic arousal response to a saturated red costume operating alongside the slower, culturally specific recognition that a particular ornament configuration marks a character as royal rather than divine.</p>
+<p>This dual-layer structure — a fast, partly universal perceptual channel and a slower, culturally specific symbolic channel operating together — is not unique to āhārya; it recurs, in different form, throughout this module's treatment of all three abhinayas examined so far, and gives a general account of why classical performance convention has historically traveled reasonably well across audiences unfamiliar with its specific symbolic code, since even a viewer entirely unfamiliar with the learned meaning of a particular ornament or color convention still receives the faster, more universal perceptual signal the same costume choice is simultaneously sending, arriving at a broadly correct emotional read of a scene through that channel alone even without access to its full, culturally specific symbolic content.</p>
+  </section>
+
+  <section class="module" id="aharya-20">
+    <div class="module-head">
+      <span class="module-num">20</span>
+      <h2>How Āhārya Interacts With Āṅgika and Vācika in Practice</h2>
+    </div>
+    <p>Because āhārya is fixed before a performance begins rather than produced in real time, its practical relevance to a performer's ongoing craft lies less in execution and more in the way costume, ornament, and paint constrain and interact with the other two active channels this module and Module III have examined. A heavy or elaborate headdress alters the vestibular and proprioceptive demands of the head movements discussed in Part A's section on the head and neck, requiring a performer to recalibrate their internal body-map to account for added mass and altered center of gravity — a genuine physical adjustment, not merely an aesthetic one, and one classical training explicitly rehearses by having performers practice sthāna and cārī work in full costume well before a production's final rehearsals, rather than adding costume only at the last stage of preparation.</p>
+<p>Facial paint and aṅgaracanā similarly constrain upāṅga work, since a heavily painted face necessarily reduces the visibility of fine facial micro-expression discussed in Part A's treatment of the facial nerve's dual pathways, requiring a performer to compensate with more pronounced, larger-amplitude facial movement than would be necessary or even desirable on an unpainted face — a direct, practical instance of one abhinaya channel's material constraints reshaping the technical execution required of another. A well-designed training program, on the evidence of both the classical sources and the perceptual mechanisms examined in this part, treats āhārya not as a late-stage decorative addition layered onto otherwise-complete āṅgika and vācika technique, but as a variable that must be rehearsed against from a comparatively early stage, precisely because its physical and perceptual effects on the other two channels are substantial enough to require genuine technical adaptation rather than simple tolerance.</p>
+  </section>
+
+  <div class="part-divider">Part C — Sāttvika Abhinaya<span class="part-sub">The involuntary sign</span></div>
+
+  <section class="module" id="sattvika-21">
+    <div class="module-head">
+      <span class="module-num">21</span>
+      <h2>What Sāttvika Abhinaya Actually Is</h2>
+    </div>
+    <p>Sāttvika abhinaya is the channel of dramatic expression the Nāṭyaśāstra treats as categorically distinct from the other three: not a trained skill a performer deliberately executes, but a set of eight specific involuntary physiological states — named collectively the sāttvika bhāvas — that genuine emotional absorption is said to produce in a performer's body without conscious direction, and that the tradition holds to be the single most convincing and dramatically powerful signal of authentic feeling precisely because an audience recognizes, at some level, that these particular signs cannot be straightforwardly faked the way a hasta or a facial expression can be deliberately posed. Module III's treatment of svarabheda, voice-breaking, under vācika abhinaya was already a preview of this material, since voice-break is itself one of the eight sāttvika bhāvas and was treated there specifically as an involuntary contribution layered on top of otherwise voluntary vocal technique; this part now treats the full set of eight states in their own right, with svarabheda's fuller physiological treatment folded into its dedicated section below.</p>
+<p>The tradition's own theoretical position on sāttvika abhinaya is worth stating plainly before turning to physiology, because it shapes how the rest of this part should be read: the Nāṭyaśāstra does not treat sāttvika bhāva as simply one more technical skill to be added to a performer's trained repertoire alongside the guṇas of Module III or the hastas of Part A. It treats sāttvika bhāva as evidence of something the other three channels cannot themselves guarantee — genuine internal absorption in the emotional state being portrayed — and holds that this genuine absorption, when present, produces these eight physical signs as an involuntary byproduct rather than a deliberately manufactured performance choice. This part's central technical question, addressed directly in its penultimate section, is exactly how much of that classical claim modern autonomic and affective neuroscience actually supports, and how much of it remains a normative claim about what makes a performance good rather than a strictly physiological one.</p>
+  </section>
+
+  <section class="module" id="sattvika-22">
+    <div class="module-head">
+      <span class="module-num">22</span>
+      <h2>The Śāstras: The Eight Sāttvika Bhāvas Enumerated</h2>
+    </div>
+    <p>The Nāṭyaśāstra enumerates eight sāttvika bhāvas: stambha, a paralysis or freezing of movement; sveda, sweating; romāñca, horripilation or the visible standing of body hair; svarabheda, the breaking or choking of the voice; vepathu, trembling; vaivarṇya, a visible change in facial or bodily color, typically pallor; aśru, the shedding of tears; and pralaya, a complete dissolution or loss of consciousness in its most extreme form. Each is associated in the classical texts with specific rasas and specific dramatic contexts — vepathu with fear and with extreme cold, vaivarṇya with fear and with certain categories of intense anger, aśru with both extremes of the pathetic sentiment and, notably, with extremes of joy as well, since the tradition explicitly recognizes that tears are not an exclusively sorrowful physiological sign.</p>
+<p>What distinguishes this list from the guṇas of vācika abhinaya or the hastas of āṅgika abhinaya, examined in the preceding parts of this module, is that the Nāṭyaśāstra itself frames all eight as states a performer does not directly execute through trained motor skill, but rather as states that arise when a performer has achieved sufficient genuine absorption in the underlying emotional state — a framing this part's sections on autonomic physiology below will show maps with real precision onto a well-documented, largely involuntary branch of the human nervous system, quite distinct from the voluntary motor and cortical systems examined throughout Parts A and B of this module.</p>
+  </section>
+
+  <section class="module" id="sattvika-23">
+    <div class="module-head">
+      <span class="module-num">23</span>
+      <h2>The Autonomic Nervous System: Sympathetic and Parasympathetic</h2>
+    </div>
+    <p>The autonomic nervous system governs the body's involuntary physiological functions — heart rate, digestion, sweating, pupil diameter, and a considerable range of other processes that operate continuously without requiring or, in most circumstances, even permitting direct conscious control — and is organized into two broad, often functionally opposed branches. The sympathetic branch is generally associated with states of arousal, threat response, and mobilization for action, producing increased heart rate, increased sweating, pupil dilation, and redirected blood flow away from digestion and toward skeletal muscle; the parasympathetic branch is generally associated with rest, recovery, and states of calm, producing the opposite pattern across most of the same measures. The two branches are not simply an on-off switch but operate in a continuously shifting balance, and a great many of the body's observable physiological states at any given moment reflect the net result of both branches acting simultaneously with differing relative strength.</p>
+<p>Every one of the eight sāttvika bhāvas maps onto a specific, identifiable pattern of autonomic activation, predominantly though not exclusively sympathetic, and the sections immediately following take each of the eight in turn, stating the specific autonomic mechanism responsible and, where the underlying physiology permits it, the reason a given emotional state characteristically produces that particular bhāva rather than one of the other seven. This section-by-section structure departs from the continuous-prose treatment the guṇas received in Module III specifically because each of the eight bhāvas is governed by a genuinely distinct physiological subsystem, and treating them individually, rather than folding all eight into a single general discussion of autonomic arousal, more accurately reflects how distinct their underlying mechanisms actually are.</p>
+  </section>
+
+  <section class="module" id="sattvika-24">
+    <div class="module-head">
+      <span class="module-num">24</span>
+      <h2>Stambha — Freezing and the Physiology of Immobility</h2>
+    </div>
+    <p>Stambha, the paralysis or freezing bhāva, corresponds to a well-documented component of the threat-response system that is neither the fight response nor the flight response with which it is most commonly grouped in popular usage, but a genuinely distinct third option — a state in which sympathetic arousal is high but skeletal motor output is simultaneously and actively suppressed, producing a rigid, motionless posture rather than either aggressive or evasive movement. This freeze response is thought, from an evolutionary perspective, to reflect a threat-detection circuit's assessment that a threat is severe enough, or sufficiently proximate, that movement itself would increase rather than decrease danger — many predator detection systems respond preferentially to movement, making stillness a genuinely adaptive response under specific conditions of extreme, close-range threat.</p>
+<p>The neural circuitry involved runs substantially through the amygdala and the periaqueductal gray, a midbrain structure directly implicated in defensive behavioral responses across a wide range of studied species, and the resulting motor suppression is an actively generated inhibitory state rather than a simple absence of motor activation — the muscles are not relaxed during stambha but held in a specific, effortful, rigid tension, which is precisely the quality classical performance technique aims to reproduce when portraying this bhāva: not a limp collapse but a tense, held immobility, consistent with the genuine physiological state the term names.</p>
+  </section>
+
+  <section class="module" id="sattvika-25">
+    <div class="module-head">
+      <span class="module-num">25</span>
+      <h2>Sveda — Sweating and Sympathetic Sudomotor Activation</h2>
+    </div>
+    <p>Sveda, the sweating bhāva, is produced by the sudomotor branch of the sympathetic nervous system, which directly innervates the eccrine sweat glands distributed across most of the body's skin surface and, unlike most other sweat production, which serves primarily thermoregulatory purposes, this particular category of sweating — concentrated characteristically on the palms, soles, and forehead — is triggered specifically by emotional and psychological arousal rather than by elevated body temperature, and is measurable clinically and in research settings as galvanic skin response, one of the most widely used physiological indices of emotional arousal in psychophysiological research precisely because it is so reliably and specifically tied to sympathetic activation rather than to any other bodily process.</p>
+<p>Because this emotional sweating response is driven by a dedicated sympathetic pathway largely independent of the body's thermoregulatory sweating system, it activates on a comparatively fast timescale, often within seconds of a sufficiently arousing stimulus, which is consistent with the Nāṭyaśāstra's own treatment of sveda as an acute, situationally triggered sign rather than a slow-building one, appearing specifically at moments of sudden fear, extreme exertion in dramatic combat sequences, or acute romantic or emotional intensity, rather than as a gradually accumulating state over the course of a long scene.</p>
+  </section>
+
+  <section class="module" id="sattvika-26">
+    <div class="module-head">
+      <span class="module-num">26</span>
+      <h2>Romāñca — Horripilation and the Arrector Pili Reflex</h2>
+    </div>
+    <p>Romāñca, the bhāva of visibly standing body hair, is produced by contraction of the arrector pili muscles, tiny smooth-muscle fibers attached to each hair follicle across most of the body's surface, which are themselves innervated by sympathetic nerve fibers and contract involuntarily in response to both cold — the mechanism behind the ordinary experience of goosebumps in low temperature — and strong emotional arousal, a second, independent trigger for the identical muscular reflex that operates through the same sympathetic pathway responsible for several of the other sāttvika bhāvas.</p>
+<p>In humans, unlike in many other mammals for whom piloerection serves a genuine functional purpose — trapping insulating air, or making the animal appear larger to a threat — the reflex is very likely vestigial in its original evolutionary function, since human body hair is too sparse for either the insulating or size-amplifying effect to operate meaningfully, and yet the underlying neural circuit producing the contraction remains fully intact and continues to fire reliably under sufficiently intense emotional arousal, particularly the specific combination of awe, and certain intensities of the erotic and heroic sentiments, that the Nāṭyaśāstra itself associates most strongly with romāñca — an involuntary physiological remnant that the tradition identified and catalogued as a genuine, reliable emotional signal many centuries before evolutionary biology offered any account of why the underlying reflex exists in a species for which it no longer serves its original function.</p>
+  </section>
+
+  <section class="module" id="sattvika-27">
+    <div class="module-head">
+      <span class="module-num">27</span>
+      <h2>Svarabheda Revisited From the Involuntary Side</h2>
+    </div>
+    <p>Module III's treatment of svarabheda, voice-breaking, examined the limbic-brainstem pathway responsible for involuntary emotional prosody in some detail, and this section adds only what is specific to its status here as one of the eight sāttvika bhāvas rather than repeating that earlier material at length. What is worth restating briefly is the structural point that makes svarabheda a genuine bridge between Module III and this module: it is the one sāttvika bhāva that manifests through the vācika channel rather than through a purely physical or āṅgika-adjacent one, direct confirmation that the Nāṭyaśāstra's own four-part division of abhinaya into āṅgika, vācika, āhārya, and sāttvika is not a strict partition of non-overlapping territory but a classification by expressive channel that permits a single involuntary physiological event — sympathetic and limbic activation reaching the laryngeal muscles — to be catalogued under sāttvika by cause while being experienced by an audience through the vācika channel by effect.</p>
+<p>This overlap is worth flagging explicitly because it previews this module's own final part: the four abhinayas, however useful their separate technical treatment in Parts A through C has been, are not four independent systems operating in isolation on a performing body, but four different analytical lenses trained on what is, physiologically, a considerably more unified and interconnected system than a channel-by-channel treatment can fully convey on its own.</p>
+  </section>
+
+  <section class="module" id="sattvika-28">
+    <div class="module-head">
+      <span class="module-num">28</span>
+      <h2>Vepathu — Trembling and Motor Tremor Under Load</h2>
+    </div>
+    <p>Vepathu, the trembling bhāva, has at least two partially distinct physiological contributors, and clinical movement science generally distinguishes between them even though both can present outwardly as a similar visible shaking. The first is a direct consequence of sympathetic activation on skeletal muscle: elevated sympathetic tone increases the excitability of the motor neurons supplying skeletal muscle and can produce a fine, rapid tremor, particularly under conditions of sustained high arousal combined with muscular effort, of exactly the kind associated with acute fear or extreme cold — both contexts the Nāṭyaśāstra itself specifically names for this bhāva. The second contributing factor is more directly mechanical: sustained muscular contraction of the kind stambha's freezing response or prolonged held postures require draws on a muscle's available motor units in a way that produces fatigue-related tremor even independent of sympathetic tone, meaning a performer holding an extended, tense stambha posture may develop a genuine, involuntary vepathu as a secondary physiological consequence of the first bhāva alone.</p>
+<p>This second mechanism gives a physiologically grounded account of why the Nāṭyaśāstra and the later performance tradition frequently pair stambha and vepathu in sequence within a single dramatic passage — a performer first freezing in acute fear, the freeze then giving way to visible trembling — since sustained stambha genuinely tends, given enough duration, to produce exactly this secondary tremor as an ordinary consequence of sustained muscular tension, independent of whatever additional sympathetic tremor the underlying fear state is also separately contributing.</p>
+  </section>
+
+  <section class="module" id="sattvika-29">
+    <div class="module-head">
+      <span class="module-num">29</span>
+      <h2>Vaivarṇya — Pallor and the Vasomotor Response</h2>
+    </div>
+    <p>Vaivarṇya, the bhāva of visible color change, is produced by the vasomotor branch of the autonomic nervous system, which controls the diameter of blood vessels near the skin's surface and, through that control, the visible flush or pallor of the face and other exposed skin. Sympathetic activation under acute fear characteristically triggers vasoconstriction in the skin's peripheral blood vessels, redirecting blood flow away from the skin surface and toward skeletal muscle in preparation for defensive action, producing the visible pallor the Nāṭyaśāstra associates with fear; certain categories of intense anger, by contrast, are associated with the opposite vasomotor pattern, vasodilation producing a visible flush, which is why the tradition's association of vaivarṇya with anger specifically names a change toward redness rather than toward pallor, correctly distinguishing two dramaturgically and physiologically opposite manifestations of the same underlying bhāva category depending on which emotional state is producing it.</p>
+<p>Because vaivarṇya depends on blood vessel diameter rather than on any muscular contraction a performer could directly and voluntarily execute, it is, along with aśru discussed in the following section, among the most genuinely difficult of the eight bhāvas to produce through deliberate technique alone, and the classical tradition's own acknowledgment that certain sāttvika bhāvas are more reliably produced by genuine emotional absorption than by any trained substitute finds particularly direct support here: there is no equivalent of a guṇa or a hasta for vaivarṇya, no isolated physical technique a performer can drill in the way Part A's training sequence drills sthāna or hasta precision, because the vasomotor system it depends on is considerably further removed from voluntary motor control than the skeletal-muscular systems the other bhāvas at least partially draw on.</p>
+  </section>
+
+  <section class="module" id="sattvika-30">
+    <div class="module-head">
+      <span class="module-num">30</span>
+      <h2>Aśru — Tears and the Lacrimal Reflex Under Emotion</h2>
+    </div>
+    <p>Aśru, the shedding of tears, is produced by the lacrimal glands, which under ordinary conditions maintain a continuous low-level tear production serving purely mechanical, protective functions for the eye's surface, but which under emotional arousal can be triggered into a substantially higher rate of production through a pathway that is, notably, still not completely mapped by current neuroscience, though it is known to involve the autonomic nervous system's parasympathetic branch acting on the lacrimal gland in combination with signaling from limbic structures associated with emotional processing, and to be functionally and pathway-distinct from the reflexive tearing produced by direct eye irritation.</p>
+<p>The Nāṭyaśāstra's own observation that aśru accompanies both extremes of sorrow and extremes of joy, rather than sorrow alone, anticipates a genuine puzzle in the modern research literature: emotional tears are reliably documented across a considerably wider range of triggering emotional states than sadness specifically, including intense joy, relief, and even certain aesthetic and awe-related experiences, and no fully settled account yet exists for why such a wide range of seemingly opposite emotional states converge on the identical physiological output. What does seem reasonably well supported is that emotional tears specifically, as distinct from irritant-triggered tears, occur preferentially at moments of high emotional intensity combined with a degree of passivity or surrender in the individual's own regulatory effort — consistent with the Nāṭyaśāstra's broader theoretical position that aśru, like vaivarṇya, is one of the bhāvas least amenable to direct voluntary production and most dependent on genuine underlying emotional absorption.</p>
+  </section>
+
+  <section class="module" id="sattvika-31">
+    <div class="module-head">
+      <span class="module-num">31</span>
+      <h2>Pralaya — Dissolution and Vasovagal Syncope</h2>
+    </div>
+    <p>Pralaya, the most extreme of the eight bhāvas, names a complete dissolution of the performer's ordinary conscious control, traditionally glossed as a fainting or swoon associated with the most overwhelming intensities of emotion the dramatic repertoire calls for — extreme grief, overwhelming devotional absorption, or the shock of catastrophic loss. The nearest well-documented physiological analogue is vasovagal syncope, a transient loss of consciousness produced by a sudden, excessive activation of the parasympathetic nervous system, specifically the vagus nerve, causing a rapid drop in heart rate and blood pressure sufficient to reduce blood flow to the brain below the threshold required to maintain consciousness — a mechanism well documented in response to acute emotional shock, extreme pain, and certain categories of overwhelming psychological distress, distinct from fainting caused by other mechanisms such as low blood sugar or prolonged standing.</p>
+<p>Because pralaya, taken to its full literal extent, would remove a performer from the stage entirely and end the scene rather than dramatically portray it, the classical performance tradition in practice treats pralaya principally as a stylized, controlled approximation — a performer simulating the visible external signs of impending collapse, sinking gradually rather than genuinely losing consciousness, which is consistent with this bhāva sitting at the extreme, largely non-reproducible end of a spectrum the other seven bhāvas occupy in progressively more moderate and, correspondingly, more genuinely trainable form.</p>
+  </section>
+
+  <section class="module" id="sattvika-32">
+    <div class="module-head">
+      <span class="module-num">32</span>
+      <h2>A Polyvagal Reading of Layered Autonomic States</h2>
+    </div>
+    <p>Polyvagal theory, a more recent and still actively debated framework within autonomic neuroscience, proposes a somewhat more layered account of autonomic function than the simple sympathetic-versus-parasympathetic dichotomy the earlier sections in this part have relied on, distinguishing in particular between two functionally distinct branches of parasympathetic vagal activity — one associated with calm, socially engaged states, and a second, phylogenetically older branch associated with the shutdown, immobilization responses relevant to stambha and, in its most extreme form, to pralaya. Whatever the framework's ultimate standing within the broader field, its central observation that immobilization responses and calm, rest-associated responses are not simply the same low-arousal parasympathetic state, but two physiologically distinct states that can be confused for one another at the level of outward behavior alone, is a genuinely useful lens for the eight sāttvika bhāvas taken together.</p>
+<p>Read this way, the eight bhāvas are not evenly distributed along one single axis running from calm to aroused, but occupy at least three functionally distinct autonomic zones — the high-sympathetic-arousal zone most directly responsible for sveda, romāñca, and the tremor component of vepathu; the immobilization zone most directly responsible for stambha and, in extremis, pralaya; and a less clearly classified zone, involving both autonomic branches interacting with limbic and lacrimal systems not fully captured by either simple category, responsible for aśru and much of vaivarṇya. A performer's or a director's practical understanding of which bhāvas naturally co-occur and which tend to resist appearing together in a single dramatic passage benefits from this more layered picture, since it explains, for instance, why stambha and sveda are frequently reported as occurring together — immobilization and high sympathetic arousal are not mutually exclusive states and in fact very often co-occur in genuine acute fear — in a way that a flat, single-axis arousal model does not as naturally predict.</p>
+  </section>
+
+  <section class="module" id="sattvika-33">
+    <div class="module-head">
+      <span class="module-num">33</span>
+      <h2>Can the Involuntary Be Trained? The Central Paradox</h2>
+    </div>
+    <p>The material assembled across this part's preceding sections poses a genuine paradox the Nāṭyaśāstra itself is aware of and addresses directly, rather than one this module is imposing on the material from outside: if the eight sāttvika bhāvas are, by the tradition's own definition and by the physiological evidence examined section by section above, involuntary autonomic events largely outside direct conscious motor control, in what sense can a performer be trained to produce them reliably, night after night, on cue, as a working professional discipline requires? A purely involuntary event that only appears when it happens to appear is of limited practical use to a performer who must deliver a consistent, repeatable performance across a run of shows.</p>
+<p>The tradition's own resolution, and the one contemporary acting pedagogy in a range of unrelated theatrical traditions converges on through an entirely independent line of development, is that the involuntary autonomic response can be reliably and repeatedly triggered indirectly, by deliberately cultivating the genuine emotional and imaginative state that ordinarily produces it, rather than by attempting to directly execute the physiological event itself. A performer does not will their lacrimal glands to increase tear production any more than an ordinary grieving person consciously wills their own tears; instead, a performer trained in this method deliberately, briefly, and with disciplined control accesses a genuine emotional memory or imaginative scenario sufficiently vivid to trigger authentic limbic and autonomic activation, and then relies on that activation to produce the bhāva as a genuine physiological byproduct, exactly as it would occur outside a performance context. This is, at the level of underlying mechanism, indistinguishable from what a range of modern actor-training methods independently arrived at under the general heading of affective or emotional memory technique, developed with no direct historical connection to the Nāṭyaśāstra and yet converging on the identical underlying principle: the involuntary cannot be directly manufactured, but it can be reliably and repeatably triggered indirectly, through a disciplined, trainable technique for accessing genuine feeling on cue.</p>
+  </section>
+
+  <section class="module" id="sattvika-34">
+    <div class="module-head">
+      <span class="module-num">34</span>
+      <h2>A Practical, Necessarily Limited Approach to Sāttvika Training</h2>
+    </div>
+    <p>Given the paradox just examined, a training sequence for sāttvika abhinaya necessarily looks different in kind from the training sequences Parts A and B of this module were able to specify directly for āṅgika and āhārya, and it is worth being explicit that what follows is a considerably more limited and indirect set of practices than the earlier sequences, precisely because the target being trained is not a motor skill in the ordinary sense.</p>
+<p>The first stage is a disciplined, private practice of emotional recall, conducted well outside of performance pressure, in which a performer identifies a small set of genuine personal memories reliably capable of producing strong emotional response, and practices accessing each memory briefly, deliberately, and with a clear ability to set it aside again immediately afterward — the ability to exit the recalled state cleanly is treated in the classical tradition and in comparable modern methods as being at least as important as the ability to enter it, given the clear psychological risks of a performer who cannot reliably disengage from an intensely recalled emotional memory once a scene has ended. The second stage pairs this emotional recall practice with the specific dramatic material a role requires, testing whether a given memory reliably produces a bhāva appropriate to the specific rasa the role calls for, and substituting a different memory where the association proves unreliable or where the produced bhāva does not match the dramatic requirement closely enough. The third and final stage integrates this emotional access with the fully trained āṅgika, vācika, and āhārya technique examined in the rest of this module, on the understanding — stated directly by the tradition itself and returned to in this module's closing section — that a performance combining all four channels, with sāttvika bhāva arising as a genuine involuntary byproduct of real emotional engagement rather than being either faked outright or left entirely to chance, is what the classical tradition holds to be the complete and fully realized form of abhinaya.</p>
+  </section>
+
+  <div class="part-divider">Part D — Synthesis</div>
+
+  <section class="module" id="synth-35">
+    <div class="module-head">
+      <span class="module-num">35</span>
+      <h2>How the Four Abhinayas Integrate as a Single System</h2>
+    </div>
+    <p>Taken together, Module III's treatment of vācika abhinaya and this module's treatment of āṅgika, āhārya, and sāttvika abhinaya cover the Nāṭyaśāstra's complete four-part division of dramatic expression, and the picture that emerges from reading all four channels through their respective physiological and neural mechanisms is not one of four separate, independently operating systems that happen to be deployed together on a single stage. Vācika abhinaya's cortical speech-planning circuit and its limbic-autonomic override, examined in Module III, and āṅgika abhinaya's motor-cortical and basal-ganglia machinery, examined in this module's Part A, are both, ultimately, voluntary systems trained through the same general isolate-then-combine pedagogical principle and both susceptible to being overridden or colored by the same limbic-autonomic system this module's Part C examined directly under sāttvika abhinaya. Svarabheda's status as a bhāva that manifests through the vācika channel, discussed explicitly in this module's section twenty-seven, is the clearest single piece of evidence that these four categories are analytical lenses on a unified underlying performing body rather than four genuinely separate systems working in isolation.</p>
+<p>Āhārya abhinaya occupies a structurally different position in this unified picture, as Part B's closing section on its practical interaction with āṅgika and vācika already began to establish: rather than being a fifth voluntary or involuntary output channel in its own right, it is better understood as a fixed material context that shapes the physical and perceptual conditions under which the other three channels operate, adding real vestibular, proprioceptive, and expressive-visibility constraints a performer must train against directly. A complete account of a performer's craft, on the evidence this module and Module III together assemble, is therefore an account of one interconnected neural and physiological system — voluntary cortical and cerebellar motor control, gated by the basal ganglia, colored and periodically overridden by limbic and autonomic input, operating within the fixed material constraints costume and ornament impose — deliberately trained, channel by channel, until it becomes capable of functioning as a single coordinated instrument rather than four separately rehearsed skills performed simultaneously by coincidence.</p>
+  </section>
+
+  <section class="module" id="synth-36">
+    <div class="module-head">
+      <span class="module-num">36</span>
+      <h2>A Combined Training Sequence Across All Four Channels</h2>
+    </div>
+    <p>Bringing together Module III's vācika training sequence and this module's separate sequences for āṅgika and sāttvika yields a final, combined progression that a complete performer's training would move through only after each individual channel's own isolated sequence has already been substantially mastered on its own terms — attempting the combined sequence before the component channels are independently secure risks exactly the kind of cross-channel degradation Part B's section on āhārya's practical interactions already warned against, where conscious attention devoted to one channel measurably degrades the quality of another.</p>
+<p>The combined sequence begins with simultaneous vācika and āṅgika work — a short passage of dialogue delivered with full guṇa control from Module III while simultaneously executing a matched hasta and cārī sequence from this module's Part A, checking specifically that neither channel's precision degrades under the combined load. It proceeds to full costume and ornament, following Part B's recommendation that āhārya be rehearsed against well before final performance rather than added at the last stage, allowing a performer to recalibrate proprioceptive and vestibular expectations while vācika and āṅgika technique are still being actively monitored for degradation. It concludes with the deliberate, disciplined emotional-access practice detailed in this module's section thirty-four, layered on top of the now-secure combination of the other three channels, so that whatever genuine sāttvika bhāva the emotional recall produces arrives as a byproduct enriching an already technically secure performance, rather than as a substitute a performer reaches for to compensate for technique that has not yet been sufficiently trained on its own.</p>
+  </section>
+
+  <section class="module" id="synth-37">
+    <div class="module-head">
+      <span class="module-num">37</span>
+      <h2>Where This Module Leads: Toward Rasa as Convergence</h2>
+    </div>
+    <p>Module III closed by observing that vācika abhinaya's full practice is the disciplined coordination of a largely voluntary cortical system and a largely involuntary limbic-autonomic one, operating together as a single instrument; this module's treatment of āṅgika, āhārya, and sāttvika abhinaya extends that same basic architecture across the whole performing body, and arrives at essentially the same structural conclusion by a different and considerably longer route. What neither module has yet addressed directly is the audience's side of this transaction — the question of what, precisely, a viewer experiences when all four channels are successfully coordinated and delivered together, and why the classical tradition holds that experience, named rasa, to be qualitatively different from the sum of the four channels' individually documented perceptual and physiological effects on a viewer considered separately.</p>
+<p>That question — what rasa is, as a documented or plausible phenomenon of audience experience rather than of performer technique, and what neuroscience's account of empathy, aesthetic emotion, and shared affective response can and cannot say about it — is the proper subject of this series' next installment, building directly on the performer-side physiological groundwork this module and Module III have now completed in full across all four classical channels of abhinaya.</p>
+  </section>
+  </main>
+
+  <footer>
+    MODULE IV · ĀṄGIKA, ĀHĀRYA, SĀTTVIKA ABHINAYA · BODY, ADORNMENT, INVOLUNTARY SIGN, ŚĀSTRA, PRACTICE
+  </footer>
+
+</div>
+
+<a class="top" href="#top" title="Back to top">↑</a>
+
+</body>
+</html>
 
 </body>
 </html>
